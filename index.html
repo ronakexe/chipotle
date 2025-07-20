@@ -75,10 +75,9 @@
                 // Option 2: Store in localStorage (temporary)
                 localStorage.setItem('githubUsername', value);
                 
-                // Option 3: Send via email (using mailto)
-                const subject = 'GitHub Username Submission';
-                const body = `GitHub Username: ${value}`;
-                window.location.href = `mailto:ronak.ramnani@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                // Option 3: Send SMS (works on mobile)
+                const message = `GitHub Username: ${value}`;
+                window.location.href = `sms:YOUR_PHONE_NUMBER?body=${encodeURIComponent(message)}`;
                 
                 // Option 4: Display confirmation
                 alert(`Received: ${value}`);
