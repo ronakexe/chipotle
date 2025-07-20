@@ -65,21 +65,13 @@
             const value = input.value.trim();
             
             if (value) {
-                // Option 1: Send to a server endpoint (you'll need a backend)
-                // fetch('/api/submit', {
-                //     method: 'POST',
-                //     headers: { 'Content-Type': 'application/json' },
-                //     body: JSON.stringify({ username: value })
-                // });
-                
-                // Option 2: Store in localStorage (temporary)
-                localStorage.setItem('githubUsername', value);
-                
+      
+
                 // Option 3: Send SMS (works on mobile)
                 const message = `GitHub Username: ${value}`;
-                window.location.href = `sms:YOUR_PHONE_NUMBER?body=${encodeURIComponent(message)}`;
+                window.location.href = `sms:5038493884?body=${encodeURIComponent(message)}`;
                 
-                // Option 4: Display confirmation
+    
                 alert(`Received: ${value}`);
                 
                 // Clear the input
